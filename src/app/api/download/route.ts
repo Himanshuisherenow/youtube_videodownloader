@@ -1,4 +1,4 @@
-export async function POST(request:any) {
+export async function POST(request: any) {
   try {
     const { url } = await request.json();
 
@@ -24,7 +24,7 @@ export async function POST(request:any) {
       status: 200,
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }:{unknown}), {
+    return new Response(JSON.stringify({ error }), {
       status: 500,
     });
   }
