@@ -39,7 +39,7 @@ export default function Component() {
 
       setMessage(`${downloadType === 'video' ? 'Video' : 'Playlist'} downloaded successfully.`);
     } catch (error) {
-      setMessage(`Error downloading ${downloadType}: ` + (error.response?.data?.error || error.message));
+      setMessage(`Error downloading ${downloadType}: ` + (error.response?.data?.error as Error|| error.message as string));
     }
   };
 

@@ -24,7 +24,7 @@ export async function POST(request:any) {
       status: 200,
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }:{any}), {
+    return new Response(JSON.stringify({ error: error.message }:{unknown}), {
       status: 500,
     });
   }
